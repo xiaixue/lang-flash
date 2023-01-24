@@ -64,10 +64,10 @@ Some translations may be innacurate due to the differences between nouns, verbs,
 
 > Run `log_in.py` and start using it.
 
-![3](assets/example/p1.png)
-![3](assets/example/p2.png)
-![3](assets/example/p3.png)
-![3](assets/example/p4.png)
-![3](assets/example/p5.png)
-![3](assets/example/p6.png)
-![3](assets/example/p7.png)
+![](assets/example/p1.png)
+![](assets/example/p2.png)
+![](assets/example/p3.png)
+![](assets/example/p4.png)
+![](assets/example/p5.png)
+![](assets/example/p6.png)
+![](assets/example/p7.png)
