@@ -193,7 +193,20 @@ class inGame:
       else:
         self.budui += 1
     else:
-      if self.guess.get() == self.words[self.answers[self.right_answer]][1] or self.guess.get() == self.words[self.answers[self.right_answer]][2]:
+      to_add = {
+        3: [1, -1, 0, 1, -2, -1, -1, 0], 
+        2: [-1,  1, 1, 0, 1, 2, 1, 0]}
+      if self.lang == "Chinese":
+        fir = self.answers_order[0]  + to_add[self.answers_order[0]][4] # 1 | 4
+        second = self.answers_order[0] + to_add[self.answers_order[0]][5] # 2 | 4
+      elif self.lang == "Japanese":
+        fir = self.answers_order[0] + to_add[self.answers_order[0]][6] # 2 | 3
+        second = self.answers_order[0] + to_add[self.answers_order[0]][6] # 2 | 3
+      else: 
+        fir = self.answers_order[0] + to_add[self.answers_order[0]][7]# 3 | 2
+        second = self.answers_order[0] + to_add[self.answers_order[0]][7]# 3 | 2
+
+      if self.guess.get() == self.words[self.answers[self.right_answer]][fir] or self.guess.get() == self.words[self.answers[self.right_answer]][second]:
         self.frame.destroy()
         self.dui += 1
         return inGame(self.master, self.words, user_data= self.user_data, language= self.lang, diff= self.diff, trad= self.trad, dui= self.dui, budui= self.budui, flip_= self.flip)
